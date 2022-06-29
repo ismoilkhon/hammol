@@ -1,0 +1,33 @@
+.categories {
+	width: 12vw;
+	overflow: hidden;
+	padding-bottom: 6px;
+	border-radius: 8px;
+	align-items: flex-start;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.categories h1 {
+	font-size: 0.8rem;
+	padding: 10px 20px;
+}
+
+.categories button {
+	width: 100%;
+	border: none;
+	display: block;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: start;
+	padding: 10px 20px;
+	background-color: transparent;
+}
+.categories .selected {
+	background-color: #efefef;
+	border-left: 4px solid teal;
+}
+
+.categories button:hover {
+	background-color: #efefef;
+}

@@ -1,0 +1,15 @@
+.rating {
+	width: 226px;
+	font-size: 45px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.rating label {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.rating .selected {
+	color: orange;
+}
