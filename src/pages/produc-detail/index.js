@@ -18,16 +18,16 @@ export function ProductDetail() {
 				setSelectedImage(res?.images[0])
 			})
 			.catch(console.log)
-	}, [])
+	}, [id])
 
 	return (
 		<>
 			<button className='back-arrow' onClick={() => navigate(-1)}>➜</button>
 			<div className='product-detail'>
 				<div className='img-cont'>
-					<img src={selectedImage}/>
+					<img src={selectedImage} alt='img'/>
 					<div>
-						{product?.images?.map(img => <img key={img} src={img} onClick={() => setSelectedImage(img)}/>)}
+						{product?.images?.map(img => <img key={img} alt='img' src={img} onClick={() => setSelectedImage(img)}/>)}
 					</div>
 				</div>
 				<div className='content-cont'>

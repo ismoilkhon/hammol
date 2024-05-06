@@ -26,7 +26,7 @@ export function Products() {
 				console.log(res)
 			})
 			.catch(console.log)
-	}, [query, offset, selectedCategory])
+	}, [query, offset, selectedCategory, dispatch])
 
 	return (
 		<>

@@ -15,7 +15,7 @@ export function Navigation() {
 			.then(res => res.json())
 			.then(res => dispatch(categoriesActions.load(res)))
 			.catch(console.log)
-	}, [])
+	}, [dispatch])
 
 	function search(e) {
 		setValue(e.target.value)
