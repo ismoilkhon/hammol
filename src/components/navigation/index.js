@@ -11,7 +11,7 @@ export function Navigation() {
 	const [value, setValue] = useState()
 
 	useEffect(() => {
-		fetch('/api/category')
+		fetch('https://dummyjson.com/products/categories')
 			.then(res => res.json())
 			.then(res => dispatch(categoriesActions.load(res)))
 			.catch(console.log)
@@ -30,7 +30,7 @@ export function Navigation() {
 	return (
 		<nav>
 			<div>
-				<h1>Hammol</h1>
+				<h1>Web-store</h1>
 				<input
 					type='text'
 					value={value}

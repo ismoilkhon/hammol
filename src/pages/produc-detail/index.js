@@ -11,7 +11,7 @@ export function ProductDetail() {
 	const [selectedImage, setSelectedImage] = useState(null)
 
 	useEffect(() => {
-		fetch(`/api/product/${id}`)
+		fetch(`https://dummyjson.com/products/${id}`)
 			.then(res => res.json())
 			.then(res => {
 				setProduct(res)

@@ -18,11 +18,12 @@ export function Products() {
 	const selectedCategory = useSelector(store => store.selectedCategory.value)
 
 	useEffect(() => {
-		fetch(`/api/product?limit=${constants.LIMIT}&offset=${offset}&category=${selectedCategory}&name=${query}`)
+		fetch(`https://dummyjson.com/products/?limit=${constants.LIMIT}&skip=${offset}&category=${selectedCategory}&select=${query}`)
 			.then(res => res.json())
 			.then(res => {
-				dispatch(countActions.set(res.count))
+				dispatch(countActions.set(res.total))
 				dispatch(productsActions.set(res.products))
+				console.log(res)
 			})
 			.catch(console.log)
 	}, [query, offset, selectedCategory])
